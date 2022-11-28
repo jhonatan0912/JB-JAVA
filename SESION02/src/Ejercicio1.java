@@ -7,9 +7,9 @@ public class Ejercicio1 {
         double n1, n2, s, r, m, d, rc, rs, p;
         try (Scanner lectura = new Scanner(System.in)) {
             // entrada de datos
-            System.out.println("Numero 1: x");
+            System.out.println("Numero 1: ");
             n1 = lectura.nextDouble();
-            System.out.println("Numero 2: x");
+            System.out.println("Numero 2: ");
             n2 = lectura.nextDouble();
         }
 
