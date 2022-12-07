@@ -9,7 +9,6 @@ public class frame1 extends javax.swing.JFrame {
     }
 
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
@@ -60,20 +59,20 @@ public class frame1 extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void botonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonActionPerformed
-    int numero1,numero2,r;        // TODO add your handling code here:
-    numero1= Integer.parseInt(txt1.getText());
-    numero2= Integer.parseInt(txt2.getText());
-    
-    r=numero1+numero2;
-    
-    //txtresultado.setText("El resultado es:"+r);
-    txtresultado.setText(String.valueOf(r));
-    }//GEN-LAST:event_botonActionPerformed
+    private void botonActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_botonActionPerformed
+        int numero1, numero2, r; // TODO add your handling code here:
+        numero1 = Integer.parseInt(txt1.getText());
+        numero2 = Integer.parseInt(txt2.getText());
 
-    private void txtresultadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtresultadoActionPerformed
+        r = numero1 + numero2;
+
+        // txtresultado.setText("El resultado es:"+r);
+        txtresultado.setText(String.valueOf(r));
+    }// GEN-LAST:event_botonActionPerformed
+
+    private void txtresultadoActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_txtresultadoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtresultadoActionPerformed
+    }// GEN-LAST:event_txtresultadoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -83,10 +82,10 @@ public class frame1 extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new frame1().setVisible(true);
-                
+
             }
         });
-                    
+
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
