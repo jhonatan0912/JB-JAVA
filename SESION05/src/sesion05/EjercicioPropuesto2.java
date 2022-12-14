@@ -1,4 +1,4 @@
-package sesion05;
+    package sesion05;
 
 public class EjercicioPropuesto2 extends javax.swing.JFrame {
 
