@@ -2,9 +2,9 @@ package sesion07;
 
 import javax.swing.JOptionPane;
 
-public class EjercicioPropuesto1 extends javax.swing.JFrame {
+public class EjercicioPropuesto2 extends javax.swing.JFrame {
 
-    public EjercicioPropuesto1() {
+    public EjercicioPropuesto2() {
         initComponents();
     }
 
@@ -12,11 +12,15 @@ public class EjercicioPropuesto1 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        calcular = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        calcular = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel1.setText("N sueldos");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, -1));
 
         calcular.setText("Calcular");
         calcular.addActionListener(new java.awt.event.ActionListener() {
@@ -24,11 +28,7 @@ public class EjercicioPropuesto1 extends javax.swing.JFrame {
                 calcularActionPerformed(evt);
             }
         });
-        getContentPane().add(calcular, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 100, 80, 30));
-
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel1.setText("N numeros determinando el mayor");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, -1, -1));
+        getContentPane().add(calcular, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, 90, 40));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -36,22 +36,21 @@ public class EjercicioPropuesto1 extends javax.swing.JFrame {
     private void calcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_calcularActionPerformed
         // TODO add your handling code here:
         int numero;
-        double val,mayor; 
+        double sueldo,total,promedio;
         
-        numero=Integer.parseInt(JOptionPane.showInputDialog("Insertar cantidad de numeros"));
-        mayor=0;
+        numero=Integer.parseInt(JOptionPane.showInputDialog("Insertar cantidad de empleados"));
         
+        total=0;
+        promedio=0;
         for(int i = 1;i<=numero;i++)
         {
-            val=Integer.parseInt(JOptionPane.showInputDialog("Ingrese valor "+i+":"));
-            
-            if(val>mayor){
-                mayor=val;
-            }
+            sueldo=Integer.parseInt(JOptionPane.showInputDialog("Insertar sueldo " + i));
+            total+=sueldo;
+            promedio=total/i;
         }
         
-        JOptionPane.showMessageDialog(null,"El mayor es "+ mayor);
         
+        JOptionPane.showMessageDialog(null, "El total es"+total+"\n"+"El promedio es "+ promedio);
     }//GEN-LAST:event_calcularActionPerformed
 
     /**
@@ -71,20 +70,20 @@ public class EjercicioPropuesto1 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(EjercicioPropuesto1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EjercicioPropuesto2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(EjercicioPropuesto1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EjercicioPropuesto2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(EjercicioPropuesto1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EjercicioPropuesto2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(EjercicioPropuesto1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EjercicioPropuesto2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new EjercicioPropuesto1().setVisible(true);
+                new EjercicioPropuesto2().setVisible(true);
             }
         });
     }
